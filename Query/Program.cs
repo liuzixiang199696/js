@@ -7,8 +7,20 @@ namespace Query
         static void Main(string[] args)
         {
             //生成一个固定数组
-            int[] array =new int[] {1,13,45,78,98,111,133,144,199,210,230 };
-            Console.WriteLine("现有数据为1{0},13{1},45{2},78{3},98{4},111{5},133{6},144{7},199{8},210{9},230{10} ");
+            // int[] array =new int[] {1,13,45,78,98,111,133,144,199,210,230 };
+            int Length = 10;
+            int[] array = new int[Length];
+            array[0] = new Random().Next(15, 500);
+           
+            for (int i = 0; i <Length-1; i++)
+            {
+                array[i+1] = array[i] + new Random().Next(15,500); 
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write($"现有数据为:{array[i]}"+"      ");
+            }
+           
             Console.WriteLine("请输入您要查询的数字:");
             //index  = 数组的最大位数，
             int index = array.Length - 1;
