@@ -6,17 +6,6 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            //int[,] arrays = new int[9,9];
-            //for (int i = 0; i < 9; i++)
-            //{
-            //    Console.WriteLine("  ");
-            //    for (int j = 0; j < 9; j++)
-            //    {
-            //        arrays[i, j] = i + j;
-            //        Console.Write(arrays[i,j]);
-            //    }
-            //}
-            int c = 1;
             int Length = 10;//指定数组长度。
             int[] array = new int[Length];
             array[0] = new Random().Next(15, 500);//初始值随机。
@@ -33,27 +22,37 @@ namespace ConsoleApp1
 
             }
             Console.WriteLine("请输入您要查询的数字:");
-            int index = array.Length - 1;//右边界
+            Qurey qurey = new Qurey();
+            qurey.lzx(array);
+        }
+    }
+    class Qurey
+    {
+        public void lzx(int[] array)
+        {
+            int c = 1;
+            int index = array.Length - 1;
             int input = Convert.ToInt32(Console.ReadLine());
-            int min = 0;
-            while (min<=index)
+            bool Judgment = false;
+            while (!Judgment)
             {
                 int steps = (index + 1) / 2;
                 if (input == array[index])
                 {
                     Console.Write($"第{c}查找，取第{index}位,值为{array[index]}");
                     Console.WriteLine("找到了" + array[index]);
-                    c++; 
-                    break;
+                    c++;
+                    Judgment = true;
                 }
                 else if (input < array[index])
                 {
-                    
+
                     Console.WriteLine($"第{c}查找，取第{index}位,值为{array[index]}");
                     index = index - steps;
                     c++;
                 }
-                else {
+                else
+                {
                     Console.WriteLine($"第{c}查找，取第{index},值为{array[index]}");
                     index = steps + index;
                     c++;
@@ -62,8 +61,7 @@ namespace ConsoleApp1
 
 
             }
-
-
         }
+
     }
 }
