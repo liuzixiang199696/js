@@ -43,7 +43,7 @@ namespace ConsoleApp1
                 {
                     Console.Write($"第{c}查找，取第{index}位,值为{array[index]}");
                     Console.WriteLine("找到了" + array[index]);
-                    c++;
+                    c++; 
                     break;
                 }
                 else if (input < array[index])

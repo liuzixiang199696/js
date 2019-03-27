@@ -6,7 +6,10 @@ namespace sq2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int a = 1;
+            double b = 3;
+            Console.WriteLine(a/b);
+           
         }
     }
 }
