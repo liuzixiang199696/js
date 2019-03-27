@@ -14,7 +14,7 @@ namespace Guess_the_number
                 Console.WriteLine("-----------------------------");
                 Console.WriteLine("您还有{0}次机会输入", 10 - i);
                 Console.WriteLine($"请输入你要猜的数字{max}以内");
-                string num;
+               
                 int number = Convert.ToInt32(Console.ReadLine());
                 //int num = convert.ToInt32(Console.RedLine()）；
                 // num = Console.Read();只能输入一个字符。
