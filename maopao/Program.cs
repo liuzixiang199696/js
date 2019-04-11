@@ -6,18 +6,15 @@ namespace maopao
     {
         static void Main(string[] args)
         {
-            int[] a = { 7, 1, 8, 9, 4, 1, 2, 6, 5 };
-            Mysort mysort =new Mysort();
-            mysort.Lzx(a);
+            Console.WriteLine(getUser().Item1);
+            int[] a = { 7, 1, 8, 9, 4, 1, 2, 6, 5 };    
+            Lzx(a);
             for (int v = 0; v < a.Length; v++)
             {
                 Console.WriteLine("第{0}个数字为{1}", v + 1, a[v]);
             }
         }
-    }
-    public class Mysort
-    {
-        public  void Lzx(int[] a)
+        static void Lzx(int[] a)
         {
             for (int w = 0; w < a.Length - 1; w++)
             {
@@ -39,8 +36,13 @@ namespace maopao
 
         }
 
+        static (int, string, bool) getUser() {
 
+            return (18,"zixiang",true);
+        }
     }
-}
+
+ }
+
 
 
