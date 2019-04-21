@@ -138,15 +138,17 @@
         //删除一个数组里面重复的元素
 
         //function drop(array) {
-        //    array.sort();                     
-        //    var re = new Array;
-        //    for (var a = 0; a < array.length; a++) {
+        //    array.sort();                         // 排序，
+        //    var re = new Array;                        // 声明一个数组储存结果，
+                    //遍历数组，取出类型为String，进行比较，
+        //    for (var a = 0; a < array.length; a++) {          
         //        if (typeof array[a] === "string") {
         //            if (array[a] != re[re.length - 1]) {
         //                re.push(array[a]);
         //            }
         //        }
         //    }
+                //类型不为String进行比较。
         //    for (var i = 1; i < array.length; i++) {
         //        if (typeof array[i] !== "string") {
         //            if (array[i] != re[re.length - 1]) {
@@ -159,6 +161,8 @@
         //alert(drop([1, "1", 1,6, 2, 9, 2, 3, 13, 'abd',13,3,4,'4',4,13,'abd','abcd']));
 
         //编写一个计算源栈返还红包金额的函数 Redbag() 
+       //numberOfPeople为人数， Discount为折扣，
+
 
         //function Redbag(numberOfPeople,Discount=10) {
         //    //1个人红包为19.80元，每增加一个人红包个数+19.80元，两个人红包个数为1,3个人为2，
