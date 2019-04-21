@@ -177,17 +177,15 @@
   //      Redbag(11,1);
         //不使用JavaScript内置函数，将一个字符串顺序颠倒，比如：'hello,yuanzhan' 变成 'nahznauy,olleh'。
         //function inverted(text) {
-        //    var array = new Array;
-        //    var arr = text.split('');
-        //    var newtext;
-        //    for (var i = 0; i < arr.length; i++) {
-        //        array[i] = text[arr.length - i - 1];
-
-        //    }
-        //    newtext = array.join('');
-        //    console.log(newtext);
-        //}
-        //inverted('hello,yuanzhan');
+        var text = 'hello,yuanzhan';
+        var newtext = new String;
+        for (var i = 0; i < text.length; i++) {
+            newtext = newtext +text[text.length - i-1];
+        }
+        alert(newtext);
+        
+      //  }
+      //  inverted('hello,yuanzhan');
         //统计出这段文字中有多少个单词：
 
         //var text = 'There are two ways to create a RegExp object: a literal notation and a constructor.To indicate strings,the parameters to the literal notation do not use quotationarks while the parameters to the constructor function do use quotation- marks.So the following expressions create the same regular expression';
