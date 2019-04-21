@@ -137,26 +137,26 @@
 
         //删除一个数组里面重复的元素
 
-        function drop(array) {
-            array.sort();                     
-            var re = new Array;
-            for (var a = 0; a < array.length; a++) {
-                if (typeof array[a] === "string") {
-                    if (array[a] != re[re.length - 1]) {
-                        re.push(array[a]);
-                    }
-                }
-            }
-            for (var i = 1; i < array.length; i++) {
-                if (typeof array[i] !== "string") {
-                    if (array[i] != re[re.length - 1]) {
-                        re.push(array[i]);
-                    }
-                }
-            }
-            return re;
-        }
-        alert(drop([1, "1", 1,6, 2, 9, 2, 3, 13, 'abd',13,3,4,'4',4,13,'abd','abcd']));
+        //function drop(array) {
+        //    array.sort();                     
+        //    var re = new Array;
+        //    for (var a = 0; a < array.length; a++) {
+        //        if (typeof array[a] === "string") {
+        //            if (array[a] != re[re.length - 1]) {
+        //                re.push(array[a]);
+        //            }
+        //        }
+        //    }
+        //    for (var i = 1; i < array.length; i++) {
+        //        if (typeof array[i] !== "string") {
+        //            if (array[i] != re[re.length - 1]) {
+        //                re.push(array[i]);
+        //            }
+        //        }
+        //    }
+        //    return re;
+        //}
+        //alert(drop([1, "1", 1,6, 2, 9, 2, 3, 13, 'abd',13,3,4,'4',4,13,'abd','abcd']));
 
         //编写一个计算源栈返还红包金额的函数 Redbag() 
 
