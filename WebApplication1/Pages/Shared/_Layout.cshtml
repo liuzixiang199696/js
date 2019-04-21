@@ -39,14 +39,14 @@
   //      //首字母大写开头，其他字母小写
   //      //截去超过6个字符的部分，如'community'将变成'Commun'
 
-  //      var array = ['why', 'gIT', 'vs2019', 'community', 'VERSION'];
-  //      for (var i = 0; i < array.length; i++) {
-  //          array[i] = array[i].toLowerCase();                    //全部转成小写
-  //          array[i] = array[i].replace(array[i][0], array[i][0].toUpperCase());    //首字母第一个大写，用哪个都行
-  //          array[i] = array[i][0].toUpperCase() + array[i].substring(1, array[i].length);     //首字母第一个大写，用哪个都行
-  //          array[i] = array[i].slice(0, 6);                //截去超过6个字符的部分
-  //      };
-  //      alert(array);
+        //var array = ['why', 'gIT', 'vs2019', 'community', 'VERSION'];
+        //for (var i = 0; i < array.length; i++) {
+        //    array[i] = array[i].toLowerCase();                    //全部转成小写
+        //    array[i] = array[i].replace(array[i][0], array[i][0].toUpperCase());    //首字母第一个大写，用哪个都行
+        //    array[i] = array[i][0].toUpperCase() + array[i].substring(1);     //首字母第一个大写，用哪个都行
+        //    array[i] = array[i].slice(0, 6);                //截去超过6个字符的部分
+        //};
+        //alert(array);
 
 
   //       //将源栈同学姓名 / 昵称装入数组，再根据该数组输出共有多少同学
@@ -68,30 +68,30 @@
   //      //如果一个数只能被1和它自己整除，这个数就被称之为“素数”。请找出100以内的所有素数。
   //      //然后封装成一个函数findPrime(max) ，可以返回max以内的所有素数。
 
-  //      PrimeNumber(200);
-  //      function PrimeNumber(max) {
-  //          var a = 0;
-  //          var array = new Array;
-  //          var newArray = new Array; 
-  //          for (var i = 2; i < max + 1; i++) {        //取出最大值为max的所有数，
-  //              for (var q = 2; q < i; q++) {       //判断是否为素数，用传入数%比它小的数且大于1，都有余数则为素数。
-  //                  if (i % q === 0) {                //如果不是素数给它赋值为0，
-  //                      array[i-3] = 0;
-  //                      break;
-  //                  } if (i%q!==0) {
-  //                      array[i-3] = i;               //是素数取出，
-  //                  }
-  //              }
-  //          }
-  //          array.unshift(2);                     // 把数组中为0的去掉，用新数组装结果，
-  //          for (var i = 0; i < array.length; i++) {
-  //          if (array[i]>0) {
-  //              newArray[a] = array[i];
-  //              a++;
-  //          }
-  //      }    
-  //          alert(newArray);
-  //      }
+        //PrimeNumber(200);
+        //function PrimeNumber(max) {
+        //    var a = 0;
+        //    var array = new Array;
+        //    var newArray = new Array; 
+        //    for (var i = 2; i < max + 1; i++) {        //取出最大值为max的所有数，
+        //        for (var q = 2; q < i; q++) {       //判断是否为素数，用传入数%比它小的数且大于1，都有余数则为素数。
+        //            if (i % q === 0) {                //如果不是素数给它赋值为0，
+        //                array[i-3] = 0;
+        //                break;
+        //            } if (i%q!==0) {
+        //                array[i-3] = i;               //是素数取出，
+        //            }
+        //        }
+        //    }
+        //    array.unshift(2);                     // 把数组中为0的去掉，用新数组装结果，
+        //    for (var i = 0; i < array.length; i++) {
+        //    if (array[i]>0) {
+        //        newArray[a] = array[i];
+        //        a++;
+        //    }
+        //}    
+        //    alert(newArray);
+        //}
         
        
 
@@ -175,6 +175,29 @@
   //          alert("本周你的红包为："+money);
   //      }
   //      Redbag(11,1);
+        //不使用JavaScript内置函数，将一个字符串顺序颠倒，比如：'hello,yuanzhan' 变成 'nahznauy,olleh'。
+        //function inverted(text) {
+        //    var array = new Array;
+        //    var arr = text.split('');
+        //    var newtext;
+        //    for (var i = 0; i < arr.length; i++) {
+        //        array[i] = text[arr.length - i - 1];
+
+        //    }
+        //    newtext = array.join('');
+        //    console.log(newtext);
+        //}
+        //inverted('hello,yuanzhan');
+        //统计出这段文字中有多少个单词：
+
+        //var text = 'There are two ways to create a RegExp object: a literal notation and a constructor.To indicate strings,the parameters to the literal notation do not use quotationarks while the parameters to the constructor function do use quotation- marks.So the following expressions create the same regular expression';
+        //text = text.replace(',', ' ');
+        //text = text.replace('.', ' ');
+        //text = text.replace('.', ' ');
+        //text = text.replace('-', ' ');
+        //var str = text.split(' ');
+        //alert('本文共有' + str.length + '个单词，感谢查阅。');
+
     </script>
     
 </head>
