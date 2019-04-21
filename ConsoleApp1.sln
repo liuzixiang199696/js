@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Text1", "Text1\Text1.csproj", "{EEBBBC4D-7AA9-4F4B-A5FF-D28DBD2D6D70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "homework", "Text1\homework.csproj", "{EEBBBC4D-7AA9-4F4B-A5FF-D28DBD2D6D70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{69D7D645-D1EA-4BCA-8F76-F9B7E092DCF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "js", "WebApplication1\js.csproj", "{69D7D645-D1EA-4BCA-8F76-F9B7E092DCF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
