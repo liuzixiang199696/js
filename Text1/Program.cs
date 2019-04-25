@@ -6,23 +6,16 @@ namespace Text1
     {
         static void Main(string[] args)
         {
-            int[] myArray = new int[] { 45, 36, 18, 53, 72, 30, 48, 93, 15, 36 };
-
-            Sort.quickSort(myArray, 0, myArray.Length - 1);
-            for (int i = 0; i < myArray.Length; i++)
-            {
-                Console.WriteLine(myArray[i]);
-            }
-
+            Console.WriteLine(Program1.Q4(2.5));
         }
         static void seek()
         {
             int a = 1;
             int b = 2;
             int c = a + b;
-            Console.WriteLine(c);
-          
-           
+            System.Console.WriteLine(c);
+
+
             //int[] array = { 1, 2, 3, 4, 3 };
             //for (int i = 0; i < array.Length; i++)
             //{
@@ -31,39 +24,44 @@ namespace Text1
 
 
         }
-        static int MySum(int x, int y) {
+        static int MySum(int x, int y)
+        {
             int sum;
             sum = x + y;
             return sum;
         }
-        struct Books {
+        struct Books
+        {
             public String Title;
             public String Author;
             public String subject;
             public int book_id;
-            public void getBooks (String p1, String p2, String p3, int p4)
+            public void getBooks(String p1, String p2, String p3, int p4)
             {
                 Title = p1;
                 Author = p2;
                 subject = p3;
                 book_id = p4;
             }
-            public void getcw() {
-               Console.WriteLine("Book {1} title : {0}", Title, book_id);
-               Console.WriteLine("Book {1} author : {0}", Author, book_id);
-               Console.WriteLine("Book {1} subject : {0}", subject, book_id);
-               Console.WriteLine("Book {1} book_id :{0}", book_id, book_id);
+            public void getcw()
+            {
+                Console.WriteLine("Book {1} title : {0}", Title, book_id);
+                Console.WriteLine("Book {1} author : {0}", Author, book_id);
+                Console.WriteLine("Book {1} subject : {0}", subject, book_id);
+                Console.WriteLine("Book {1} book_id :{0}", book_id, book_id);
 
             }
         }
-        static void Judgment() {
-          int input = int.Parse( Console.ReadLine());
-            if (input>90)
+        static void Judgment()
+        {
+            int input = int.Parse(Console.ReadLine());
+            if (input > 90)
             {
                 Console.WriteLine(1);
                 return;
             }
-            if (input>80) {
+            if (input > 80)
+            {
                 Console.WriteLine(2);
                 return;
             }
@@ -72,13 +70,15 @@ namespace Text1
                 Console.WriteLine(3);
                 return;
             }
-            else {
+            else
+            {
                 Console.WriteLine(4);
             }
-                    
+
 
         }
-        static void text() {
+        static void text()
+        {
             Console.WriteLine("Hello World!");
             //创建一个数组
             int[] a = { 7, 1, 8, 9, 4, 1, 2, 6, 5 };
@@ -113,7 +113,7 @@ namespace Text1
 
         }
         static void Query()
-            {
+        {
             //生成一个固定数组
             // int[] array =new int[] {1,13,45,78,98,111,133,144,199,210,230 };
             //更新： 生成了一个完全随机且有序数组，（初始值也随机）。
@@ -138,12 +138,6 @@ namespace Text1
             int index = array.Length - 1;//右边界
             int input = Convert.ToInt32(Console.ReadLine());
 
-
-
-
-
-
-
             for (int i = 0; i < array.Length; i++)
             {
                 // steps = 数组中间角标值，
@@ -165,15 +159,15 @@ namespace Text1
                         index = index - steps;
                     }
                 }
-                //Console.WriteLine($"第{i + 1}查找，取第{index},值为{array[index]}");
-                //while (input > array[index])
-                //{
-                //    index = steps + index;
-                //}
-                //while (input < array[index])
-                //{
-                //    index = index - steps;
-                //}
+                Console.WriteLine($"第{i + 1}查找，取第{index},值为{array[index]}");
+                while (input > array[index])
+                {
+                    index = steps + index;
+                }
+                while (input < array[index])
+                {
+                    index = index - steps;
+                }
             }
 
         }
@@ -198,7 +192,8 @@ namespace Text1
             }
 
         }
-        static void Guess() {
+        static void Guess()
+        {
             int max = 1000;
             int random = new Random().Next(max);
             for (int i = 0; i < 10; i++)
@@ -227,7 +222,8 @@ namespace Text1
                 Console.WriteLine("正确数字是" + random);
             }
         }
-        static void Console() {
+        static void BinarySearch()
+        {
 
             int Length = 10;//指定数组长度。
             int[] array = new int[Length];
@@ -245,13 +241,22 @@ namespace Text1
 
             }
             Console.WriteLine("请输入您要查询的数字:");
-            Qurey qurey = new Qurey();
-            qurey.lzx(array);
         }
+        static void Sorting()
+        {
 
+            int[] myArray = new int[] { 45, 36, 18, 53, 72, 30, 48, 93, 15, 36 };
+
+            Sort.quickSort(myArray, 0, myArray.Length - 1);
+            for (int i = 0; i < myArray.Length; i++)
+            {
+                Console.WriteLine(myArray[i]);
+            }
+        }
     }
-    
-    class peison {
+
+    class peison
+    {
         public int age;
         public string name;
         //public peison() {
@@ -259,7 +264,8 @@ namespace Text1
         //    this.name="子祥";
         //    Console.WriteLine(age+name);
         //}
-        public peison(int age, string name) {
+        public peison(int age, string name)
+        {
             this.age = age;
             this.name = name;
             Console.WriteLine(age);
@@ -306,4 +312,84 @@ namespace Text1
 
     }
 
+
+
+
+
+    public class Program1
+    {
+        //1.输入一个字母，判断是大写还是小写字母
+        public static void Q1()
+        {
+
+            Console.WriteLine("请输入一个字母 ");
+            char ch = char.Parse(Console.ReadLine());
+            if (ch >= 'a' && ch <= 'z')
+
+            {
+
+                Console.WriteLine("小写");
+
+            }
+
+            else
+
+                Console.WriteLine("大写");
+
+        }
+        //2.用户输入三个整数，将最大数和最小数输出
+        public static void Q2()
+        {
+            Console.WriteLine("请输入第一个数字");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("请输入第二个数字");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("请输入第三个数字");
+            int c = Convert.ToInt32(Console.ReadLine());
+            int max = Math.Max(Math.Max(a, b), c);
+            int min = Math.Min(Math.Min(a, b), c);
+            Console.WriteLine("最大值为" + max + "最小值为" + min);
+
+        }
+        //3.计算2.5的3次方
+        public static void Q3()
+        {
+            double a = 2.5;
+            double suma = a * a * a;
+            Console.WriteLine(suma);
+            Console.WriteLine(Math.Pow(2.5, 3));
+        }
+        //4.一个名为Circle类包含一个字段（半径），两个方法，一个方法求面积，
+        //另一个方法求周长，并在Main函数中传递相应的数据，来显示他的周长和面积
+        public static double Q4(double Radius)
+        {
+
+            return Math.PI * Radius * Radius;
+            //return Math.PI*2*Radius;
+        }
+
+
+
+
+    }
+
+    //  设计一个形状为figure，字段的个数和构造函数的设计自己考虑，另外设计一个虚方法
+    //  设计一个圆的类Circle, 继承figure类，并重写求面积的方法
+    //设计完成后在Main函数中定义square和circle的实例，并调用求面积的方法，输出他们的面积
+    public class Circle
+    {
+
+
+
+    }
+
+
+
 }
+
+
+
+
+
+
+
